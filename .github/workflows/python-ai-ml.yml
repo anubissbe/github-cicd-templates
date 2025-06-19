@@ -152,7 +152,7 @@ jobs:
           REDIS_URL: redis://localhost:6379
 
       - name: 📊 Upload coverage reports
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage.xml
           flags: ${{ matrix.test-type }}-python${{ matrix.python-version }}
