@@ -27,18 +27,18 @@ This repository contains optimized CI/CD pipeline templates that solve critical 
 
 | Template | Use Case | Description |
 |----------|----------|-------------|
-| **[universal-pipeline-optimized.yml](workflows/universal-pipeline-optimized.yml)** | **All repositories** | ✅ **RECOMMENDED** - Auto-detects project type |
-| [typescript-fullstack.yml](workflows/typescript-fullstack.yml) | Complex React/Node.js | Full-stack applications with frontend/backend |
-| [python-ai-ml.yml](workflows/python-ai-ml.yml) | Python AI/ML projects | Includes GPU support and model testing |
-| [minimal-nodejs.yml](workflows/minimal-nodejs.yml) | Simple Node.js | Lightweight for basic scripts |
-| [mcp-server.yml](workflows/mcp-server.yml) | MCP servers | Model Context Protocol servers |
+| **[universal-pipeline-optimized.yml](.github/workflows/universal-pipeline-optimized.yml)** | **All repositories** | ✅ **RECOMMENDED** - Auto-detects project type |
+| [typescript-fullstack.yml](.github/workflows/typescript-fullstack.yml) | Complex React/Node.js | Full-stack applications with frontend/backend |
+| [python-ai-ml.yml](.github/workflows/python-ai-ml.yml) | Python AI/ML projects | Includes GPU support and model testing |
+| [minimal-nodejs.yml](.github/workflows/minimal-nodejs.yml) | Simple Node.js | Lightweight for basic scripts |
+| [mcp-server.yml](.github/workflows/mcp-server.yml) | MCP servers | Model Context Protocol servers |
 
 ### 2. Copy to Your Repository
 
 ```bash
 # Copy the optimized universal pipeline (recommended)
 curl -o .github/workflows/ci-cd.yml \
-  https://raw.githubusercontent.com/anubissbe/github-cicd-templates/main/workflows/universal-pipeline-optimized.yml
+  https://raw.githubusercontent.com/anubissbe/github-cicd-templates/main/.github/workflows/universal-pipeline-optimized.yml
 ```
 
 ### 3. Configure Required Secrets

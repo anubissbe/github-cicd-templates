@@ -1,0 +1,31 @@
+name: 🔍 Validate Templates
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/*.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/*.yml'
+
+jobs:
+  validate:
+    name: Validate Workflow Syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔍 Validate YAML syntax
+        run: |
+          echo "Validating workflow templates..."
+          for file in .github/workflows/*.yml; do
+            echo "Checking: $file"
+            if ! yamllint -d relaxed "$file"; then
+              echo "❌ Invalid syntax in $file"
+              exit 1
+            fi
+          done
+          echo "✅ All templates have valid syntax"
