@@ -1,0 +1,57 @@
+# Sensitive files
+.env
+.env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+*.cert
+
+# Local configuration
+local-config/
+CLAUDE.md
+*_LOCAL.md
+
+# Vault tokens and credentials
+vault-tokens.txt
+credentials.json
+tokens.json
+
+# Database credentials
+database.conf
+db-credentials.txt
+
+# SSH keys
+*.rsa
+*.pub
+id_*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
