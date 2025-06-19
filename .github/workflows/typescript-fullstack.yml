@@ -103,7 +103,7 @@ jobs:
 
       - name: 📊 Upload coverage reports
         if: matrix.test-type == 'unit'
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage/lcov.info
           flags: frontend
@@ -162,7 +162,7 @@ jobs:
           REDIS_URL: redis://localhost:6379
 
       - name: 📊 Upload coverage reports
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage/lcov.info
           flags: backend
