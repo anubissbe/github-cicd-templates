@@ -85,7 +85,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: 🏗️ Build Docker image for ${{ matrix.platform }}
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: ${{ matrix.platform }}
@@ -353,7 +353,7 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: 🚢 Build and push to multiple registries
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64
@@ -414,7 +414,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: 🏗️ Build with latest base images
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64,linux/arm64
