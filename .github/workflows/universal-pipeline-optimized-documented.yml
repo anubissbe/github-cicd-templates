@@ -553,7 +553,7 @@ jobs:
       
       # Build (and push if not PR)
       - name: 🏗️ Build and Push Docker Image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/amd64  # Add linux/arm64 if needed
