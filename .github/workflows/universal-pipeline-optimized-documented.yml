@@ -240,7 +240,7 @@ jobs:
       # JavaScript/TypeScript quality checks
       - name: 🟢 Setup Node.js
         if: needs.setup.outputs.language == 'javascript'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: ${{ needs.setup.outputs.package-manager }}
@@ -364,7 +364,7 @@ jobs:
       # JavaScript testing
       - name: 🟢 Setup Node.js
         if: needs.setup.outputs.language == 'javascript'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: ${{ needs.setup.outputs.package-manager }}
@@ -455,7 +455,7 @@ jobs:
       # Setup based on language
       - name: 🟢 Setup Node.js
         if: needs.setup.outputs.language == 'javascript'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: ${{ needs.setup.outputs.package-manager }}
