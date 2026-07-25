@@ -278,7 +278,7 @@ jobs:
       # Python quality checks
       - name: 🐍 Setup Python
         if: needs.setup.outputs.language == 'python'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
@@ -387,7 +387,7 @@ jobs:
       # Python testing
       - name: 🐍 Setup Python
         if: needs.setup.outputs.language == 'python'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
@@ -462,7 +462,7 @@ jobs:
       
       - name: 🐍 Setup Python
         if: needs.setup.outputs.language == 'python'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
